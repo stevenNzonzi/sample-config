@@ -3,11 +3,21 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: properties_route1
+      - id: redirectRoute
         uri: http://localhost:9081/getname
         predicates:
         - Path=/foo/
-      - id: properties_route2
-        uri: http://localhost:9081/getname
+      - id: HeaderMatching
+        uri: http://localhost:9080/world
         predicates:
-        - Path=/foor/
+        - Header=X-Request-Id, \d+
+      -id: HystrixExample
+        uri: https://localhost:9080/getname
+        predicates:
+        - Path=/consumingserviceendpoint
+        filters:
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/fallback
+            
