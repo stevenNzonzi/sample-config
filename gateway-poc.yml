@@ -14,7 +14,7 @@ spring:
       -id: HystrixExample
         uri: https://localhost:9080/getname
         predicates:
-        - Path=/consumingserviceendpoint
+        - Path=/get
         filters:
         - name: Hystrix
           args:
