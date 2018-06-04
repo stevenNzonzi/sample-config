@@ -13,7 +13,7 @@ spring:
         -Path=/post
         -Method=POST
       -id: HystrixExample
-        uri: https://localhost:9080/getname
+        uri: https://localhost:9081/getname
         predicates:
         - Path=/getmyname
         filters:
