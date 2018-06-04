@@ -6,7 +6,7 @@ spring:
       - id: redirectRoute
         uri: http://localhost:9081/getname
         predicates:
-        - Path=/foo/
+        - Path=/foo
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
