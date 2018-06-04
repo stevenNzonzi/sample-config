@@ -7,7 +7,7 @@ spring:
         uri: http://localhost:9081/getname
         predicates:
         - Path=/foo/
-      - id: properties_route2
+      - id: properties_route1
         uri: http://localhost:9081/getname
         predicates:
         - Path=/foor/
