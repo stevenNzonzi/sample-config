@@ -10,8 +10,7 @@ spring:
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
-        - Header=head, aasd
-        - Path=/header
+        -Method=GET
       -id: HystrixExample
         uri: https://localhost:9080/getname
         predicates:
