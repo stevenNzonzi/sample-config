@@ -8,7 +8,7 @@ spring:
         predicates:
         - Path=/path
         filters:
-        - RequestRateLimiter=2, 10, #{@testKeyResolver}
+        - RequestRateLimiter=100, 100, #{@testKeyResolver}
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
