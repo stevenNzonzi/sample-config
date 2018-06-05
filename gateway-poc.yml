@@ -7,8 +7,8 @@ spring:
         uri: http://localhost:9081/getname
         predicates:
         - Path=/path
-        filters:
-        - RequestRateLimiter=1, 10, #{@testKeyResolver}
+#         filters:
+#         - RequestRateLimiter=1, 10, #{@testKeyResolver}
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
