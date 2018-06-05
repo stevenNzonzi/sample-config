@@ -23,7 +23,7 @@ spring:
           args:
             name: fallbackcmd
             fallbackUri: forward:/world
-      - id: HeaderMatching
+      - id: MethodMatching
         uri: http://localhost:9080/world
         predicates:
         - Path=/post
