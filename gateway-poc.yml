@@ -10,8 +10,8 @@ spring:
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
-        -Path=/post
-      -id: HystrixExample
+        - Path=/post
+      - id: HystrixExample
         uri: https://localhost:9081/getname
         predicates:
         - Path=/getmyname
