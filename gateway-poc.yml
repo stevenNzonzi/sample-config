@@ -11,6 +11,7 @@ spring:
         uri: http://localhost:9080/world
         predicates:
         - Path=/post
+        - Header=X-Request-Id, \d+
       - id: HystrixExample
         uri: https://localhost:9081/getname
         predicates:
