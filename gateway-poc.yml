@@ -20,5 +20,5 @@ spring:
         - name: Hystrix
           args:
             name: fallbackcmd
-            fallbackUri: forward:/fallback
+            fallbackUri: localhost:9080:/fallback
             
