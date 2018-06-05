@@ -6,19 +6,23 @@ spring:
       - id: redirectRoute
         uri: http://localhost:9081/getname
         predicates:
-        - Path=/four
+        - Path=/path
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
-        - Path=/post
+        - Path=/header
         - Header=X-Request-Id, \d+
       - id: HystrixExample
         uri: http://localhost:9081/getname
         predicates:
-        - Path=/getmyname
+        - Path=/checkfallback
         filters:
         - name: Hystrix
           args:
             name: fallbackcmd
             fallbackUri: forward:/world
-            
+      - id: HeaderMatching
+        uri: http://localhost:9080/world
+        predicates:
+        - Path=/post
+        - Method=POST
