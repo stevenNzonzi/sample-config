@@ -4,7 +4,7 @@ spring:
     gateway:
       routes:
       - id: redirectRoute
-        uri: https://localhost:9081/getname
+        uri: http://localhost:9081/getname
         predicates:
         - Path=/four
       - id: HeaderMatching
@@ -13,7 +13,7 @@ spring:
         - Path=/post
         - Header=X-Request-Id, \d+
       - id: HystrixExample
-        uri: https://localhost:9081/getname
+        uri: http://localhost:9081/getname
         predicates:
         - Path=/getmyname
         filters:
