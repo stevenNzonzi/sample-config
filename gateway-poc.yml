@@ -4,7 +4,7 @@ spring:
     gateway:
       routes:
       - id: redirectRoute
-        uri: http://localhost:9081/getname
+        uri: https://localhost:9081/getname
         predicates:
         - Path=/four
       - id: HeaderMatching
