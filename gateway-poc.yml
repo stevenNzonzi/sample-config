@@ -17,7 +17,7 @@ spring:
       - id: HystrixExample
         uri: http://localhost:9081/getname
         predicates:
-        - Path=/checkingfallback
+        - Path=/checkfallback
         filters:
         - name: Hystrix
           args:
