@@ -10,7 +10,7 @@ spring:
         filters:
         - name: RequestRateLimiter
           args:
-            key-resolver: "#{@TestResolver}"
+            key-resolver: "#{@testResolver}"
             redis-rate-limiter.replenishRate: 1
             redis-rate-limiter.burstCapacity: 5
       - id: HeaderMatching
