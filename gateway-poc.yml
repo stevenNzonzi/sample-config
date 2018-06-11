@@ -7,12 +7,12 @@ spring:
         uri: http://localhost:9081/getname
         predicates:
         - Path=/path
-#         filters:
-#         - name: RequestRateLimiter
-#           args:
-#             key-resolver: "#{@testResolver}"
-#             redis-rate-limiter.replenishRate: 1
-#             redis-rate-limiter.burstCapacity: 5
+        filters:
+        - name: RequestRateLimiter
+          args:
+            key-resolver: "#{@testResolver}"
+            redis-rate-limiter.replenishRate: 1
+            redis-rate-limiter.burstCapacity: 5
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
