@@ -32,3 +32,7 @@ spring:
         predicates:
         - Path=/post
         - Method=POST
+      - id: dummypath
+        uri: http://localhost:9080/world
+        predicates:
+        - Path=/dummy
