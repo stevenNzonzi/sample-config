@@ -13,6 +13,11 @@ spring:
             key-resolver: "#{@testResolver}"
             redis-rate-limiter.replenishRate: 3
             redis-rate-limiter.burstCapacity: 3
+        - name: RequestRateLimiter
+          args:
+            key-resolver: "#{@newResolver}"
+            redis-rate-limiter.replenishRate: 1
+            redis-rate-limiter.burstCapacity: 1       
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
