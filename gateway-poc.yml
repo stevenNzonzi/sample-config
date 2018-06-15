@@ -11,8 +11,8 @@ spring:
         - name: RequestRateLimiter
           args:
             key-resolver: "#{@testResolver}"
-            redis-rate-limiter.replenishRate: 20
-            redis-rate-limiter.burstCapacity: 20
+            redis-rate-limiter.replenishRate: 1000
+            redis-rate-limiter.burstCapacity: 100
 #         - name: RequestRateLimiter
 #           args:
 #             key-resolver: "#{@newResolver}"
