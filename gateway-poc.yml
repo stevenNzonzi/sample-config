@@ -10,9 +10,9 @@ spring:
         filters:
         - name: RequestRateLimiter
           args:
-            key-resolver: "#{@testResolver}"
-            redis-rate-limiter.replenishRate: 1000
-            redis-rate-limiter.burstCapacity: 100
+            key-resolver: "#{@searchKeyResolver}"
+            redis-rate-limiter.replenishRate: 200
+            redis-rate-limiter.burstCapacity: 200
 #         - name: RequestRateLimiter
 #           args:
 #             key-resolver: "#{@newResolver}"
