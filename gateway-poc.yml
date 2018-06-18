@@ -12,7 +12,7 @@ spring:
           args:
             key-resolver: "#{@searchKeyResolver}"
             redis-rate-limiter.replenishRate: 200
-            redis-rate-limiter.burstCapacity: 0
+            redis-rate-limiter.burstCapacity: 200
 #         - name: RequestRateLimiter
 #           args:
 #             key-resolver: "#{@newResolver}"
