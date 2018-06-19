@@ -11,8 +11,8 @@ spring:
         - name: RequestRateLimiter
           args:
             key-resolver: "#{@searchKeyResolver}"
-            redis-rate-limiter.replenishRate: 1
-            redis-rate-limiter.burstCapacity: 1
+            redis-rate-limiter.replenishRate: 10
+            redis-rate-limiter.burstCapacity: 10
 #         - name: RequestRateLimiter
 #           args:
 #             key-resolver: "#{@newResolver}"
@@ -23,6 +23,12 @@ spring:
         predicates:
         - Path=/header
         - Header=X-Request-Id, \d+
+        filters:
+        - name: RequestRateLimiter
+          args:
+            key-resolver: "#{@searchKeyResolver}"
+            redis-rate-limiter.replenishRate: 10
+            redis-rate-limiter.burstCapacity: 10
       - id: HystrixExample
         uri: http://localhost:9081/getname
         predicates:
