@@ -4,20 +4,24 @@ spring:
     gateway:
       routes:
       - id: redirectRoute
-        uri: http://localhost:9081/getname
+        uri: http://172.17.22.126:9081/getname
         predicates:
         - Path=/path
         filters:
         - name: RequestRateLimiter
           args:
-            key-resolver: "#{@searchKeyResolver}"
-            redis-rate-limiter.replenishRate: 10
-            redis-rate-limiter.burstCapacity: 10
+            key-resolver: "#{@defaultKeyResolver}"
+            redis-rate-limiter.replenishRate: 100
+            redis-rate-limiter.burstCapacity: 100
 #         - name: RequestRateLimiter
 #           args:
 #             key-resolver: "#{@newResolver}"
 #             redis-rate-limiter.replenishRate: 1
-#             redis-rate-limiter.burstCapacity: 1       
+#             redis-rate-limiter.burstCapacity: 1      
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/fallback
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
