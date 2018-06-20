@@ -1,4 +1,4 @@
-
+hello: "awesome"
 spring:
   cloud:
     gateway:
