@@ -64,3 +64,8 @@ rate-limit:
       redirectRoute: [10,10]
     localhost:
       redirectRoute: [1,1]
+            
+refresh:
+  configuration:
+    url: http://localhost:9080/actuator/refresh
+    cron: "*/10 * * * * *"
