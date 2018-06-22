@@ -4,7 +4,7 @@ spring:
     gateway:
       routes:
       - id: redirectRoute
-        uri: http://localhost:9081/getname
+        uri: http://http://172.17.22.126:9081/getname
         predicates:
         - Path=/path2
         filters:
