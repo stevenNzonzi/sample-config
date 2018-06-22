@@ -18,10 +18,10 @@ spring:
 #             key-resolver: "#{@newResolver}"
 #             redis-rate-limiter.replenishRate: 1
 #             redis-rate-limiter.burstCapacity: 1      
-        - name: Hystrix
-          args:
-            name: fallbackcmd
-            fallbackUri: forward:/fallback
+#         - name: Hystrix
+#           args:
+#             name: fallbackcmd
+#             fallbackUri: forward:/fallback
       - id: HeaderMatching
         uri: http://localhost:9080/world
         predicates:
