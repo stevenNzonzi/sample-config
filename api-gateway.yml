@@ -68,4 +68,4 @@ rate-limit:
 refresh:
   configuration:
     url: http://localhost:9080/actuator/refresh
-    cron: "*/10 * * * * *"
+    cron: "*/30 * * * * *"
