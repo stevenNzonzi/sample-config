@@ -64,8 +64,8 @@ rate-limit:
       redirectRoute: [10,10]
     "192.168.45.116":
       redirectRoute: [50,50]
-    localhost:
-      redirectRoute: [50,1]
+#     localhost:
+#       redirectRoute: [50,1]
             
 refresh:
   configuration:
