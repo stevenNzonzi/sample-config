@@ -62,10 +62,10 @@ rate-limit:
       HystrixExample: [2,2]
     ixigo:
       redirectRoute: [10,10]
-    "192.168.45.116":
-      redirectRoute: [50,50]
-#     localhost:
-#       redirectRoute: [50,1]
+#     "192.168.45.116":
+#       redirectRoute: [50,50]
+    localhost:
+      redirectRoute: [50,1]
             
 refresh:
   configuration:
