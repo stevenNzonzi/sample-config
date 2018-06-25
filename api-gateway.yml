@@ -4,7 +4,7 @@ spring:
     gateway:
       routes:
       - id: redirectRoute
-        uri: http://localhost:9081/getname
+        uri: http://172.17.22.126:9081/getname
         predicates:
         - Path=/path2
         filters:
@@ -23,7 +23,7 @@ spring:
 #             name: fallbackcmd
 #             fallbackUri: forward:/fallback
       - id: HeaderMatching
-        uri: http://localhost:9080/world
+        uri: http://172.17.22.126:9081/getname
         predicates:
         - Path=/header
         - Header=X-Request-Id, \d+
