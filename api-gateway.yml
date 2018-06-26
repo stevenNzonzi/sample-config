@@ -1,13 +1,13 @@
 
 spring:
- redis:
-#    host: localhost
-#    port: 6379
-   cluster:
-     nodes:
-     - 172.17.23.211:30001
-     - 172.17.23.211:30002
-     - 172.17.23.211:30003
+  redis:
+#     host: localhost
+#     port: 6379
+    cluster:
+      nodes:
+      - 172.17.23.211:30001
+      - 172.17.23.211:30002
+      - 172.17.23.211:30003
   profiles: local
   cloud:
     gateway:
