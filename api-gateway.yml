@@ -30,7 +30,7 @@ spring:
         - name: Hystrix
           args:
             name: fallbackcmd
-            fallbackUri: forward:/fallback
+#             fallbackUri: forward:/fallback
       - id: HeaderMatching
         uri: http://172.17.22.126:9081/getname
         predicates:
