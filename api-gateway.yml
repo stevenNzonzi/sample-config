@@ -80,3 +80,19 @@ refresh:
   configuration:
     url: http://localhost:9080/actuator/refresh
     cron: "0 0 * * * *"
+
+#Hystrix settings
+hystrix:
+  command:
+    fallbackcmd:
+     execution:
+      isolation:
+        strategy: semaphore
+        semaphore:
+          maxConcurrentRequests: 4
+     fallback:
+      isolation:
+        semaphore:
+          maxConcurrentRequests: 10
+     circuitBreaker:
+      requestVolumeThreshold: 10
