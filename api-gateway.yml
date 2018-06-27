@@ -69,7 +69,7 @@ rate-limit:
       redirectRoute: [1,1]
       HeaderMatching: [10,10]
       HystrixExample: [2,2]
-    "shubham.bansal@cleartrip.com":
+    "[shubham.bansal@cleartrip.com]":
       redirectRoute: [10,10]
 #     192.168.45.116:
 #       redirectRoute: [50,50]
