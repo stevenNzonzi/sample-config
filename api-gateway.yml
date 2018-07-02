@@ -73,11 +73,15 @@ rate-limit:
       redirectRoute: [10,10]
 #     192.168.45.116:
 #       redirectRoute: [50,50]
-    localhost:
-      redirectRoute: [50,50]
+    #localhost:
+     # redirectRoute: [50,50]
   # In case no rate limiting is defined above, use this #    
   default:
     localhost: [10,10]
+    
+    
+    
+    
 refresh:
   configuration:
     url: http://localhost:9080/actuator/refresh
