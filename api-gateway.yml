@@ -63,7 +63,7 @@ spring:
 
 rate-limit:
   # Specify route specific rate limiting here #
-  host:
+  email:
     paytm:
       ##     the syntax for list is : [replenishRate, BurstRate]
       redirectRoute: [1,1]
