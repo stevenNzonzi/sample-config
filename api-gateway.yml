@@ -76,7 +76,7 @@ rate-limit:
     #localhost:
      # redirectRoute: [50,50]
   # In case no rate limiting is defined above, use this #    
-  default:
+  defaultRateLimit:
     localhost: [10,10]
     
     
